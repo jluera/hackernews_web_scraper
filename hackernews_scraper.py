@@ -1,7 +1,6 @@
 import requests
 import csv
 from bs4 import BeautifulSoup
-from pprint import pprint
 
 # triple variations of variables to get 3 pages of hackernews
 req = requests.get('https://news.ycombinator.com/news')  
@@ -44,6 +43,5 @@ def write_to_file(file):
 
 if __name__ == '__main__':
     scraped_news = scrape_hackernews(multi_links, multi_subtext)
-    print(scraped_news)
     write_to_file(scraped_news)
   
